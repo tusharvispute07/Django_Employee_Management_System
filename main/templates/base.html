@@ -1,0 +1,49 @@
+{% url 'view' as view %}
+{% url 'add' as add %}
+{% url 'update' as update %}
+{% url 'filter' as filter %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}EMS{% endblock %}</title>
+    <link rel="stylesheet" href="../static/base.css">
+    {% block css %}
+    <style>
+        .content {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+        .center {
+            display: block;
+        }
+        .navbar-title-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+    {% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url "index" %}" class="navbar-title-link">
+        <div class="navbar-title">Employee Management System</div>
+        <div class="pills">
+            <a href="{% url 'view' %}" class="{% if request.path == view %}active{% endif %}">View Employees</a>
+            <a href="{% url 'add' %}" class="{% if request.path == add %}active{% endif %}">Add</a>
+            <a href="{% url 'update' %}" class="{% if request.path == update %}active{% endif %}">Update</a>
+            <a href="/admin/" target="_blank">Admin</a>
+        </div>
+    </div>
+    <div class = "content"> 
+        {% block content %}
+        <img class= "center" src = "../static/worker.png">
+        </div>
+        {% endblock %}
+    <footer class="footer">
+        &copy; 2023 Employee Management System
+    </footer>
+</body>
+</html>

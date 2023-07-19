@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+<title>{% block title %}EMS | Add{% endblock%}</title>
+{% block css %}<link rel="stylesheet" href="../static/form.css">{% endblock %}
+<div class = "content"> 
+    {% block content %}
+    <h2 class = "page-title">Add an Employee</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+        
+    </form>
+    {% endblock %}
+</div>

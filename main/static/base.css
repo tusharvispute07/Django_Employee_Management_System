@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #24252a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  
+}
+
+.navbar-title {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: helvetica;
+}
+
+.pills {
+  display: flex;
+}
+
+.pills a {
+  text-decoration: none;
+  color: #f1f2f6;
+  padding: 10px 15px;
+  margin-right: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-family: helvetica;
+}
+
+.pills a.active {
+  background-color: #1DA1F2;
+  color: #fff;
+}
+
+/* Add a hover effect for links */
+.pills a:hover {
+  background-color: #333;
+}
+.footer {
+  background-color: #24252a;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.center {
+  display: block;
+  margin: auto;
+}
+.navbar-title-link {
+  text-decoration: none;
+  color: inherit;
+}
